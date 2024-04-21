@@ -18,6 +18,15 @@ public class BaseEntity {
 
   @Id
   @GeneratedValue
+//      (
+//      strategy = GenerationType.SEQUENCE,
+//      generator = "author_sequence"
+//  )
+//  @SequenceGenerator(
+//      name = "author_sequence",
+//      sequenceName = "author_sequence",
+//      allocationSize = 1
+//  )
   private Integer id;
 
   private LocalDateTime createdAt;

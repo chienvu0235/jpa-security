@@ -1,6 +1,5 @@
 package com.chien.jpasecurity.models;
 
-import jakarta.persistence.DiscriminatorColumn;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -18,7 +17,7 @@ import lombok.experimental.SuperBuilder;
 @Data
 @SuperBuilder
 //@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-  @Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.JOINED)
 @NoArgsConstructor
 @AllArgsConstructor
 //@DiscriminatorColumn(name = "resource_type")

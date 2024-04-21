@@ -1,9 +1,9 @@
 package com.chien.jpasecurity.models;
 
-import jakarta.annotation.PostConstruct;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.NamedQuery;
 import jakarta.persistence.Table;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -20,6 +20,7 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "AUTHOR_TBL")
+@NamedQuery(name = "Author.findByNamedQuery", query = "select a from Author a where a.age >= :age")
 public class Author extends BaseEntity {
 
   @Column(name = "f_name", length = 35)
